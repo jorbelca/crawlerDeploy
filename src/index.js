@@ -23,11 +23,11 @@ import changeTimeRouter from './routes/changeTimeRoutes.js';
 
 const app = express();
 
-app.use(cors({
-  origin: "http://localhost:3000",
-  methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
-  credentials: true
-}))
+// app.use(cors({
+//   origin: "http://localhost:3000",
+//   methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
+//   credentials: true
+// }))
 app.use(json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/ping', (req, res) => { return res.status(200).send('PONG') })
