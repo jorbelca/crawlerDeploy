@@ -22,7 +22,7 @@ import changeTimeRouter from './routes/changeTimeRoutes.js';
 
 
 const app = express();
-app.use(express.static('dist'));
+
 app.use(cors({
   origin: "http://localhost:3000",
   methods: ["POST", "PUT", "GET", "DELETE", "OPTIONS", "HEAD"],
