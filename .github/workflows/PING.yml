@@ -24,6 +24,12 @@
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
      - run: echo 'The triggering workflow failed'
+     - name: mailNotification
+       uses: cinotify/github-action@main
+       with:
+        to: 'jordi_belda@hotmail.com'
+        subject: 'Error BACKEND SMALL CRAWLER'
+        body: 'Error in the ping of the backend of the small crawler. <br> url: https://smallcrawler6.herokuapp.com/api/ping '
 
        
   
