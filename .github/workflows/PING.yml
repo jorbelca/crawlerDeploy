@@ -19,7 +19,11 @@
       max-attempts: 3 
       # Delay between retries
       retry-delay: 15s 
-     
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+     - run: echo 'The triggering workflow failed'
 
        
   
