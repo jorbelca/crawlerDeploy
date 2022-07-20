@@ -5,6 +5,7 @@
     
     
  jobs:
+  ping:
    runs-on: ubuntu-latest
    steps:
    - name: Check the deployed service URL
